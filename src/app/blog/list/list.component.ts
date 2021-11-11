@@ -8,7 +8,7 @@ import { Observable, map } from 'rxjs';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  public blogPosts$: Observable<ScullyRoute[]>;
+  public blogPosts$: Observable<ScullyRoute[]> | undefined;
 
 	constructor(private _scully: ScullyRoutesService) {}
 
@@ -21,6 +21,4 @@ export class ListComponent implements OnInit {
 			}),
 		);
 	}
-}
-
 }
