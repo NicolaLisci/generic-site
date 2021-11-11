@@ -32,7 +32,12 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/config.yml"
+              "src/config.yml",
+              {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.scss"
