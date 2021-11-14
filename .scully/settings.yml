@@ -1,2 +1,11 @@
 identifier: k5v8v9f8t6q01cn7
 allowErrorCollect: true
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: generic-site
+homeFolder: /Users/nicolalisci/Documents/generic-site
+distFolder: ./dist/generic-site
+outDir: /Users/nicolalisci/Documents/generic-site/dist/static
+handle404: ''

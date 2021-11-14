@@ -15,13 +15,12 @@ export class HomeComponent implements OnInit{
   constructor(private _scully: ScullyRoutesService) {}
   
   ngOnInit(): void {
-    console.log('here')
+    console.log('')
     this.blogPosts$ = this._scully.available$.pipe(
       map((routes: ScullyRoute[]) => {
-        return routes.filter((r: ScullyRoute) => {
-          return r.route.includes('/blog/') && r.route !== '/blog';
-        });
-      }),
+        console.log(routes)
+        return routes.filter((route: ScullyRoute) => route.route.startsWith(`/blog/`));
+      })
       );
     }
   }
