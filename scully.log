@@ -43,3 +43,4 @@ Using stored unhandled routes!.
 Using stored unhandled routes!.
    To discover new routes in the angular app use "npm run scully -- --scanRoutes"
 ----------------------------------
+handleUnknownRoute: "/static/img/asset.png", 404:""
