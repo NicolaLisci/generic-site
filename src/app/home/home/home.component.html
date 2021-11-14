@@ -1,14 +1,150 @@
 <app-navbar></app-navbar>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h1>Home</h1>
+<div class="max-w-8xl mx-auto px-4">
+  <ul>
+    <li *ngFor="let post of blogPosts$ | async">
+      <a [routerLink]="[post.route]">
+        {{ post.title }}
+      </a>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Donec euismod, nisl eget consectetur congue, nisi nisl
-        fermentum nisi, euismod aliquam nunc nisl eget nisl.
-        Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas.
+        {{ post['description'] }}
       </p>
-    </div>
-  </div>
+    </li>
+  </ul>
+  <!-- <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec euismod, nisl eget consectetur congue, nisi nisl
+    fermentum nisi, euismod aliquam nunc nisl eget nisl.
+    Pellentesque habitant morbi tristique senectus et netus et
+    malesuada fames ac turpis egestas.
+  </p> -->
+</div>
